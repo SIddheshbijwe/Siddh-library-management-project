@@ -1,0 +1,238 @@
+#Computer Project
+    
+while True:
+    print('''
+
+- * - * - * - * - * - * - * - * - * - * - LIBRARY MANAGEMENT SYSTEM  - * - * - * - * - * - * - * - * - * - *                                       
+
+
+Welcome to the PNC School Library Management System. With the help of this system you can avail any facility  
+of an actual library, virtually. Enjoy your experience.
+
+1. BOOKS AVAILABLE
+2. ISSUE BOOK
+3. DISPLAY CARD
+4. EXIT
+
+    ''')
+    
+    choice=int(input("Enter your Choice - "))
+    print('''
+- * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - 
+
+''')
+    a=12
+    b=19
+    c=35
+    d=27
+    e=60
+    f=67
+    g=5
+    h=0
+    i=6
+    j=40
+    k=34
+
+
+
+#Dictionary for books  this displays books only for menu 
+    
+    books={"1. Harry Porter and The Chamber of Secrets by J.K Rowling": a,
+
+     "2. Gulliver's Travels by Jonathan Swift": b,
+     
+     "3. Goosebumps:The Haunted mask by R.L Stine":c, 
+     
+     "4. The Famous Five Collection 4 by Enid Blyton": d, 
+
+     "5. The Perfect Murder by Ruskin Bond": e, 
+
+     "6. The Art of War by Sun Tzu": f, 
+
+     "7. Speak by Laurie Halse Anderson": g, 
+
+     "8. A Wrinkle In Time by Madeleine L'Engle": h, 
+
+     "9. Brief Answers To Big Questions by Stephen Hawking": i,
+
+     "10. Murder On The Orient Express by Agatha Christie": j,
+
+     "11. The Sweetness At The Bottom Of The Pie by Alan Bradely": k
+     }
+
+#Dictionary 2 (this displays information in the display card)
+    bookname={
+     1: " Harry Porter and The Chamber of Secrets by J.K Rowling",
+
+     2: " Gulliver's Travels by Jonathan Swift",
+     
+     3:" Goosebumps:The Haunted mask by R.L Stine",
+     
+     4:" The Famous Five Collection 4 by Enid Blyton", 
+
+     5:" The Perfect Murder by Ruskin Bond", 
+
+     6:" The Art of War by Sun Tzu", 
+
+     7:" Speak by Laurie Halse Anderson", 
+
+     8:" A Wrinkle In Time by Madeleine L'Engle", 
+
+     9:" Brief Answers To Big Questions by Stephen Hawking",
+
+     10:" Murder On The Orient Express by Agatha Christie",
+
+     11:" The Sweetness At The Bottom Of The Pie by Alan Bradely"
+        }
+    
+#Main Code
+#Books Available    
+    
+    if choice==1:
+        print('''
+- * - * - * - * - * - * - * - * - * - * - * -  BOOKS AVAILABLE - * - * - * - * - * - * - * - * - * - * - * -
+
+''', "\n","\n","The following data is in the form: (Name of the book, Number of copies available)", "\n")
+        BookList= books.items() 
+        for x in BookList:
+            print("\n", x)
+            
+#Issuing of Book
+    
+    elif choice==2:
+        print('''
+- * - * - * - * - * - * - * - * - * - * - * - * - BOOK ISSUE - * - * - * - * - * - * - * - * - * - * - * - * 
+''', "\n",)
+        name = input("Enter your name : ")
+        admno = int(input("Enter your admission number : "))
+        x=int(input("Enter the serial number of the book you want to issue: "))
+        
+        if x==1:
+            print("Do you want to issue the book: Harry Porter and The Chamber of Secrets by J.K Rowling?")
+            y=input("Enter Y for Yes or N for No: ")
+
+        elif x==2:
+            print("Do you want to issue the book: Gulliver's Travels by Jonathan Swift?")
+            y=input("Enter Y for Yes or N for No: ")
+        elif x==3:
+            print("Do you want to issue the book: Goosebumps:The Haunted mask by R.L Stine?")
+            y=input("Enter Y for Yes or N for No: ")
+        elif x==4:
+            print("Do you want to issue the book: The Famous Five Collection 4 by Enid Blyton?")
+            y=input("Enter Y for Yes or N for No: ")
+        elif x==5:
+            print("Do you want to issue the book: The Perfect Murder by Ruskin Bond?")
+            y=input("Enter Y for Yes or N for No: ")
+        elif x==6:
+            print("Do you want to issue the book: The Art of War by Sun Tzu?")
+            y=input("Enter Y for Yes or N for No: ")
+        elif x==7:
+            print("Do you want to issue the book: Speak by Laurie Halse Anderson?")
+            y=input("Enter Y for Yes or N for No: ")
+        elif x==8:
+            print("Do you want to issue the book: A Wrinkle In Time by Madeleine L'Engle?")
+            y=input("Enter Y for Yes or N for No: ")
+        elif x==9:
+            print("Do you want to issue the book: Brief Answers To Big Questions by Stephen Hawking")
+            y=input("Enter Y for Yes or N for No: ")
+        elif x==10:
+            print("Do you want to issue the book: Murder On The Orient Express by Agatha Christie")
+            y=input("Enter Y for Yes or N for No: ")
+        elif x==11:
+            print("Do you want to issue the book: The Sweetness At The Bottom Of The Pie by Alan Bradely")
+            y=input("Enter Y for Yes or N for No: ")
+        
+#Confirmation        
+
+        if y=="y":
+            if x==1:
+                print("Successfully issued Harry Porter and The Chamber of Secrets by J.K Rowling")
+                a-=1
+
+            elif x==2: 
+                print("Successfully issued Gulliver's Travels by Jonathan Swift")
+                b-=1
+
+            elif x==3:
+                print("Successfully issued Goosebumps: The Haunted mask by R.L Stine")
+                c-=1
+
+            elif x==4: 
+                print("Successfully issued The Famous Five Collection 4 by Enid Blyton")
+                d-=1
+
+            elif x==5:
+                print("Successfully issued The Perfect Murder by Ruskin Bond")
+                e-=1
+
+            elif x==6:
+                print("Successfully issued The Art of War by Sun Tzu")
+                f-=1
+
+            elif x==7:
+                print("Successfully issued Speak by Laurie Halse Anderson")
+                g-=1
+
+            elif x==8:
+                print("Successfully issued A Wrinkle In Time by Madeleine L'Engle")
+                h-=1
+
+            elif x==9:
+                print("Successfully issued Brief Answers To Big Questions by Stephen Hawking")
+                i-=1
+                
+            elif x==10:
+                print("Successfully issued Murder On The Orient Express by Agatha Christie")
+                j-=1
+
+            elif x==11:
+                print("Successfully issued The Sweetness At The Bottom Of The Pie by Alan Bradely")
+                k-=1
+        if y=="n":
+            continue
+
+#Display of Library card
+        
+    elif choice==3:
+        print("DISPLAYING CARD")
+
+        print('''
++ + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + +
+
++                                                                                                             +                            
+                                            PNC SCHOOL,NEW DELHI                                           
++                                                 LIBRARY CARD                                                +
+                                                                                                           
++                                                                                                             +''')
+        print("    Name of the student :",name)
+        print("+                                                                                                             +")
+        print("    Admission number :",admno)
+        print("+                                                                                                             +")
+        print("    Book issued :",bookname[x])
+        print("+                                                                                                             +")
+        from datetime import date
+
+        today = date.today()
+        print("    Date of issue :", today)
+        print("+                                                                                                             +")
+        from datetime import datetime
+        now = datetime.now()
+
+        current_time = now.strftime("%H:%M:%S")
+        print("    Time of issue :", current_time)
+        print("+                                                                                                             +")
+        print("    Issued by : Mr.Rampal(Librarian)")
+        print("+                                                                                                             +")
+        print(" ")                                                                                                           
+        print('''+   Books should be returned to the library within 4 weeks of issue, else a penalty charge of Rs.100     
+    will be fined.
++ + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + +''')       
+        print(" ")
+        print(" ")
+        print(" ")
+        print(" ")
+        
+    elif choice==4:
+        break
+    else:
+        print("The choice you have entered is unavailable")
